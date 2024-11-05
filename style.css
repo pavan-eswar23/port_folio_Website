@@ -1,0 +1,193 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Root styling */
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background-color: var(--primary-color);
+  }
+  
+  .navbar .logo {
+    color: #fff;
+    font-size: 1.5em;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f1c40f;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 5em 2em;
+    background-color: #e1f5fe;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .hero h1 span {
+    color: var(--primary-color);
+  }
+  
+  .hero .btn {
+    padding: 0.5em 1.5em;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  .about, .skills, .contact {
+    padding: 3em 2em;
+    background-color: #fff;
+    margin: 1em 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+  }
+  
+  .about h2, .skills h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  .skills-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .skill:hover {
+    background-color: #2980b9;
+  }
+  
+  .projects {
+    padding: 3em 2em;
+    background-color: #fff;
+  }
+  
+  .project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5em;
+  }
+  
+  .project-card {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+  
+  .project-card h3 {
+    margin-bottom: 1em;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact input, .contact textarea {
+    padding: 1em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 30px;
+      background-color: #fff;
+      margin: 2px 0;
+    }
+  }
+  
